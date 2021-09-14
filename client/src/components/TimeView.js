@@ -23,7 +23,7 @@ const TimeView = (props) => {
         return list;
     }
 
-    const [times, setTimes] = useState(createTimes);
+    const [times] = useState(createTimes);
 
     return (
         <Box >

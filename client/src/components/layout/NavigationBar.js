@@ -15,7 +15,7 @@ const NavigationBar = ({ auth, onClick }) => {
             <nav className="navbar">
                 <div className="navbar-container">
                     <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
-                        <Typography variant='h4'>Plan My Week</Typography>
+                        <Typography variant='h4'>Week Forward</Typography>
                     </Link>
                     <div className='menu-icon' onClick={handleClick}>
                         <i className={click ? 'fa fa-times' : 'fa fa-bars'} />

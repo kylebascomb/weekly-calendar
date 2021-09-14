@@ -28,9 +28,6 @@ if (localStorage.jwtToken) {
     store.dispatch(logoutUser());
     window.location.href = "./login";
   }
-  // testing
-  // store.dispatch(logoutUser());
-  //   window.location.href = "./login";
 }
 
 

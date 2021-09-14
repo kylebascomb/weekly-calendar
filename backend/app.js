@@ -16,9 +16,6 @@ require('dotenv').config();
 const app = express();
 const port = process.env.PORT || 5000;
 
-// var corsOptions = {
-//     origin: "http://localhost:3000"
-//   };
 
 // connect to MongoDB
 const dbURI = process.env.ATLAS_URI;

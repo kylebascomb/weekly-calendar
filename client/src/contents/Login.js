@@ -50,8 +50,7 @@ const Login = (props) => {
               type="email"
               label="Email"
               value={props.user.email}
-              onChange={(e) => props.onChange(e)}
-              helperText={props.user.errors.email ? props.user.errors.email : ""}
+              onChange={(e) => props.onChange(e)}           
               onBlur={props.onBlur}
             />
           </div>
@@ -67,6 +66,7 @@ const Login = (props) => {
               type="password"
               label="Password"
               value={props.user.password}
+              helperText={props.user.errors.password ? props.user.errors.password : ""}
               onChange={(e) => props.onChange(e)}
             />
           </div>

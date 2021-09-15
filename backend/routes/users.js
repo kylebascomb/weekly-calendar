@@ -11,19 +11,10 @@ const SECRET = process.env.SECRET;
 let User = require('../models/user.model');
 
 
-
-
-router.get('/login', (req, res) => {
-    res.json({
-        email: 'kylebascomb@gmail.com'
-    });
-}
-);
-
 // signup POST request
 router.post('/add', (req, res) => {
     const userInfo = req.body;
-
+    console.log("Adding User");
     const email = userInfo.email;
 
     User.findOne({ $or: [{ email }] }).then(user => {

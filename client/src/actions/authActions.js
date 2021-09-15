@@ -10,7 +10,7 @@ export const registerUser = (userData, history) => dispatch => {
    dispatch(toggleUserLoading());
    console.log(userData);
    axios
-      .post("http://localhost:9000/users/add", userData)
+      .post("http://localhost:5000/users/add", userData)
       .then(res => {
          dispatch(toggleUserLoading());
          localStorage.setItem(
@@ -29,7 +29,7 @@ export const loginUser = userData => dispatch => {
    dispatch(toggleUserLoading());
    console.log(userData);
    axios
-      .post("http://localhost:9000/users/login", userData)
+      .post("http://localhost:5000/users/login", userData)
       .then(res => {
          dispatch(resetEvent());
          const { token } = res.data;

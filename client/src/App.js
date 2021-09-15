@@ -22,8 +22,8 @@ import '@fontsource/roboto';
 
 import axios from 'axios';
 
-axios.defaults.baseURL = "http://34.211.173.231:5000/"
-//axios.defaults.baseURL = "http://localhost:5000/"
+//axios.defaults.baseURL = "http://34.211.173.231:5000/"
+axios.defaults.baseURL = "http://localhost:5000/"
 
 
 
@@ -44,7 +44,7 @@ const App = () => {
 
   return (
     <Provider store={store}>
-      <Box bgcolor='#f0f0f0'>
+      <Box bgcolor='#f0f0f0' minHeight="100vh">
         <Router>
           <Navbar  />
           <Switch>

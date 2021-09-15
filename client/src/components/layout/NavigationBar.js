@@ -29,7 +29,7 @@ const NavigationBar = ({ auth, onClick }) => {
             <AppBar position="static">
                 <Toolbar >
                     <Button align="left" edge="start" color="inherit" href="/" >
-                        <Typography variant="h6" className={classes.title} >Week Ahead</Typography>
+                        <Typography variant="h5" className={classes.title} >Week Forward</Typography>
                     </Button>
                     <Box style={{ flex: 1 }} />
 

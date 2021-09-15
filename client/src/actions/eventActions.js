@@ -16,7 +16,7 @@ import { setErrors, clearErrors } from "./errorActions";
 export const createEvent = (eventData, history) => dispatch => {
    dispatch(toggleEventLoading());
    axios
-      .post("http://localhost:5000/events/create", eventData)
+      .post("events/create", eventData)
       .then(res => {
          dispatch({
             type: CREATE_EVENT,
@@ -34,7 +34,7 @@ export const createEvent = (eventData, history) => dispatch => {
 export const getEventtByID = id => dispatch => {
    dispatch(toggleEventLoading());
    axios
-      .get(`http://localhost:5000/events/event/${id}`)
+      .get(`events/event/${id}`)
       .then(res => {
          dispatch({
             type: GET_EVENT,

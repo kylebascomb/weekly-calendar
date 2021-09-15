@@ -7,7 +7,7 @@ import { connect } from "react-redux";
 import { getEvents, getEventsByAuthor, createEvent, updateEvent, deleteEvent } from "../../actions/eventActions";
 
 
-import { Box, Grid, Container } from '@material-ui/core';
+import { Box, Grid, Container,Divider } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 
 import moment from 'moment';
@@ -113,7 +113,7 @@ const WeekViewPage = ({
         <Container maxWidth="xl">
             <Grid container alignItems='flex-start' direction="row">
                 <Grid item xs={1} >
-                    <Box border={1} borderColor={"black"}>
+                    <Box borderRight={1} borderColor={"gray"}>
                         <TimeView
                             intervalMin={60}
                         ></TimeView>
@@ -122,7 +122,7 @@ const WeekViewPage = ({
                 </Grid>
                 {[0, 1, 2, 3, 4, 5, 6, 7].map((value) => (
                     <Grid key={value} item xs={1} >
-                        <Box border={1} borderColor={"black"}>
+                        <Box borderRight={1} borderColor={"gray"}>
 
                             <DayView key={events} events={events}
                                 curDate={moment().add(value, "days")}
@@ -140,6 +140,7 @@ const WeekViewPage = ({
                                 event={event}
                             ></DayView>
                         </Box>
+                        
 
                     </Grid>
                 ))}

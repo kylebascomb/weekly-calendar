@@ -35,7 +35,7 @@ const TimeView = (props) => {
                     <Divider />
                     <Box p={0} height={83}>
                         <Grid container wrap="nowrap" spacing={0}>
-                        <Typography align="center" variant="h6"> {time.format('LT')} </Typography>
+                            <Typography inline align="right" variant="h6" > {time.format('LT')} </Typography>
                         </Grid>
 
                     </Box>

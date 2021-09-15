@@ -63,26 +63,22 @@ const DayView = (props) => {
             <Box >
                 <Typography align="center" variant="h6"> {moment(props.curDate).format('dddd')} </Typography>
                     {times.map((block) => (
-                        <Box 
-
-                            >
-                        <Divider />
-                        <Event
-                            block={block}
-                            onClick={props.onClick} 
-                            loading={props.loading}
-                            onChange={props.onChange}
-                            onBlur={props.onBlur}
-                            onSubmit={props.onSubmit}
-                            onUpdate={props.onUpdate}
-                            onDelete={props.onDelete}
-                            setStart={props.setStart}
-                            setEnd={props.setEnd}
-                            setEvent={props.setEvent}
-                            event={props.event}
-                            onMouseDown={props.onMouseDown}
-                            onMouseUp={props.onMouseUp}
-                            />
+                        <Box key={block.blockStart}>
+                            <Divider />
+                            <Event
+                                block={block}
+                                onClick={props.onClick} 
+                                loading={props.loading}
+                                onChange={props.onChange}
+                                onBlur={props.onBlur}
+                                onSubmit={props.onSubmit}
+                                onUpdate={props.onUpdate}
+                                onDelete={props.onDelete}
+                                setStart={props.setStart}
+                                setEnd={props.setEnd}
+                                setEvent={props.setEvent}
+                                event={props.event}
+                                />
                             
                         </Box>
                     ))}

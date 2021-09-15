@@ -31,7 +31,7 @@ const TimeView = (props) => {
 
 
             {times.map((time) => (
-                <Box>
+                <Box key={time}>
                     <Divider />
                     <Box p={0} height={83}>
                         <Grid container wrap="nowrap" spacing={0}>

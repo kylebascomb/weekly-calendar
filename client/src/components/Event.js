@@ -1,10 +1,20 @@
 import React, { useState } from "react";
 import Box from '@material-ui/core/Box';
-import Typography from '@material-ui/core/Typography';
+import Button from '@material-ui/core/Button';
 import Popover from '@material-ui/core/Popover';
 import EventEditor from "./EventEditor";
 
+import { createTheme, withStyles, makeStyles, ThemeProvider } from '@material-ui/core/styles';
+import { green, purple } from '@material-ui/core/colors';
 
+
+const EventButton = withStyles({
+    root: {
+      textTransform: 'none',
+      fontSize: 16,
+      backgroundColor: '#0063cc',
+    },
+  })(Button);
 
 const Event = (props) => {
 
@@ -38,13 +48,13 @@ const Event = (props) => {
     return (
         <Box p={0} onClick={handleClick} height={(20 * ((props.block.duration) / 15)) + (1 * ((props.block.duration) / 15) - 1)}>
             {props.block.event && props.block.event.title &&
-                <Box bgcolor="#daedd8"
-                    style={{ height: "100%" }}
+                <EventButton 
+                    color="primary"
+                    variant="contained"
+                    style={{ height: "99%", width:"98%" }}
                     onClick={handleClick}>
+                    {props.block.event.title}
 
-                    {props.block.event &&
-                        <Typography align="center"> {props.block.event.title} </Typography>
-                    }
                     <Popover
                         id={id}
                         open={open}
@@ -78,10 +88,10 @@ const Event = (props) => {
                             ></EventEditor>
                         </Box>
                     </Popover>
-                </Box>
+                </EventButton>
             }
             {props.block.event &&
-                <Box
+                <Button
                     onClick={handleClick}>
                     <Popover
                         id={id}
@@ -116,7 +126,7 @@ const Event = (props) => {
                             ></EventEditor>
                         </Box>
                     </Popover>
-                </Box>
+                </Button>
             }
 
 

@@ -37,7 +37,7 @@ const Event = (props) => {
 
     return (
         <Box p={0} onClick={handleClick} height={(20 * ((props.block.duration) / 15)) + (1 * ((props.block.duration) / 15) - 1)}>
-            {props.block.event &&
+            {props.block.event && props.block.event.title &&
                 <Box bgcolor="#daedd8"
                     style={{ height: "100%" }}
                     onClick={handleClick}>
@@ -80,7 +80,7 @@ const Event = (props) => {
                     </Popover>
                 </Box>
             }
-            {!props.block.event &&
+            {props.block.event &&
                 <Box
                     onClick={handleClick}>
                     <Popover

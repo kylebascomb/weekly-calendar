@@ -110,8 +110,8 @@ const WeekViewPage = ({
     const classes = useStyles();
 
     return (
-        <Container maxWidth="xl">
-            <Grid container alignItems='flex-start' direction="row">
+        <Container maxWidth="xl" >
+            <Grid container alignItems='flex-start' direction="row" justify="center" >
                 <Grid item xs={1} >
                     <Box borderRight={1} borderColor={"gray"}>
                         <TimeView
@@ -121,7 +121,7 @@ const WeekViewPage = ({
 
                 </Grid>
                 {[0, 1, 2, 3, 4, 5, 6, 7].map((value) => (
-                    <Grid key={value} item xs={1} >
+                    <Grid key={value} item xs={1}  >
                         <Box borderRight={1} borderColor={"gray"}>
 
                             <DayView key={events} events={events}
@@ -146,6 +146,7 @@ const WeekViewPage = ({
                 ))}
 
             </Grid>
+            
         </Container>
 
     );

@@ -5,6 +5,8 @@ import Navbar from './containers/layout/Navbar.js';
 import LoginPage from './containers/auth/LoginPage.js';
 import SignUpPage from './containers/auth/SignUpPage.js';
 
+import { Box } from '@material-ui/core';
+
 
 import { Provider } from "react-redux";
 import jwt_decode from "jwt-decode";
@@ -42,15 +44,17 @@ const App = () => {
 
   return (
     <Provider store={store}>
-      <Router>
-        <Navbar  />
-        <Switch>
-          <Route path="/" exact component={LoginPage} />
-          <Route path="/login" component={LoginPage} />
-          <Route path="/signup" component={SignUpPage} />
-          <PrivateRoute exact path="/calendar" component={WeekViewPage} />
-        </Switch>
-      </Router>
+      <Box bgcolor='#f0f0f0'>
+        <Router>
+          <Navbar  />
+          <Switch>
+            <Route path="/" exact component={LoginPage} />
+            <Route path="/login" component={LoginPage} />
+            <Route path="/signup" component={SignUpPage} />
+            <PrivateRoute exact path="/calendar" component={WeekViewPage} />
+          </Switch>
+        </Router>
+      </Box>
     </Provider>
     
   );

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Box from '@material-ui/core/Box';
 import Button from '@material-ui/core/Button';
 import Popover from '@material-ui/core/Popover';
+import { Typography } from "@material-ui/core";
 import EventEditor from "./EventEditor";
 
 import { createTheme, withStyles, makeStyles, ThemeProvider } from '@material-ui/core/styles';
@@ -13,6 +14,7 @@ const EventButton = withStyles({
       textTransform: 'none',
       fontSize: 16,
       backgroundColor: '#0063cc',
+      
     },
   })(Button);
 
@@ -53,7 +55,7 @@ const Event = (props) => {
                     variant="contained"
                     style={{ height: "99%", width:"98%" }}
                     onClick={handleClick}>
-                    {props.block.event.title}
+                    <Typography noWrap> {props.block.event.title} </Typography>
 
                     <Popover
                         id={id}

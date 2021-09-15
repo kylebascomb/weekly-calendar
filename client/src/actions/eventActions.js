@@ -53,7 +53,7 @@ export const getEventtByID = id => dispatch => {
 export const getEventsByAuthor = author => dispatch => {
    dispatch(toggleEventsLoading());
    axios
-      .get(`http://localhost:5000/events/author/${author}`)
+      .get(`events/author/${author}`)
       .then(res => {
          dispatch({
             type: GET_EVENTS,
@@ -70,7 +70,7 @@ export const getEventsByAuthor = author => dispatch => {
 export const getEvents = () => dispatch => {
    dispatch(toggleEventsLoading());
    axios
-      .get(`http://localhost:5000/events/`)
+      .get(`events/`)
       .then(res => {
          dispatch({
             type: GET_EVENTS,
@@ -88,7 +88,7 @@ export const getEvents = () => dispatch => {
 export const updateEvent = (id, eventData, history) => dispatch => {
    dispatch(toggleEventLoading());
    axios
-      .put(`http://localhost:5000/events/event/update/${id}`, eventData)
+      .put(`events/event/update/${id}`, eventData)
       .then(res => {
          dispatch({
             type: UPDATE_EVENT,
@@ -106,7 +106,7 @@ export const updateEvent = (id, eventData, history) => dispatch => {
 export const deleteEvent = (id, history) => dispatch => {
    dispatch(toggleEventLoading());
    axios
-      .delete(`http://localhost:5000/events/event/delete/${id}`)
+      .delete(`events/event/delete/${id}`)
       .then(res => {
          dispatch({
             type: DELETE_EVENT,

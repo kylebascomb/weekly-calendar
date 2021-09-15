@@ -8,7 +8,6 @@ import { setErrors } from "./errorActions";
 
 export const registerUser = (userData, history) => dispatch => {
    dispatch(toggleUserLoading());
-   console.log(userData);
    axios
       .post("users/add", userData)
       .then(res => {
@@ -27,7 +26,6 @@ export const registerUser = (userData, history) => dispatch => {
 
 export const loginUser = userData => dispatch => {
    dispatch(toggleUserLoading());
-   console.log(userData);
    axios
       .post("users/login", userData)
       .then(res => {
@@ -60,7 +58,6 @@ export const toggleUserLoading = () => {
 };
 
 export const logoutUser = () => dispatch => {
-   console.log("Logging out User");
    localStorage.removeItem("jwtToken");
    setAuthToken(false);
    dispatch(setCurrentUser({}));

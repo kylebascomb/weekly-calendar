@@ -22,8 +22,8 @@ import '@fontsource/roboto';
 
 import axios from 'axios';
 
-//axios.defaults.baseURL = "http://34.211.173.231:5000/"
-axios.defaults.baseURL = "http://localhost:5000/"
+axios.defaults.baseURL = "http://34.211.173.231:5000/"
+//axios.defaults.baseURL = "http://localhost:5000/"
 
 
 
